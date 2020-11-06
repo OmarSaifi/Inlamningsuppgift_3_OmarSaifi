@@ -7,10 +7,11 @@ public class RentCar {
      *
      */
 
-    public static void canIHire(int income, boolean licence) {
+    public static void canIHire(int income, int yearLicence, boolean licence) {
 
         String message;
-        if (licence && income >= 20000)
+
+        if (licence && income >= 35000 && yearLicence >=3)
             message = "Du får hyra en Ferrari";
         else
             message = "Du får inte hyra en Ferrari";
@@ -29,6 +30,17 @@ public class RentCar {
         else
             return false;
     }
+
+    /**
+     * En klassmetod som kollar hur länge du har haft ditt körkort.
+     *
+     * @returnear antal år som man har haft körkortet.
+     */
+    public static int yearLicence() {
+
+        int yearLicence = Integer.parseInt(JOptionPane.showInputDialog("Hur många år har du haft ditt körtkort? (Skriv in i siffor ex: 2) och (Har du inget körkort skriv siffra: 0)"));
+        return yearLicence;
+    }
     /**
      *En klassmetod som kollar vad din inkomst är.
      *
@@ -36,8 +48,8 @@ public class RentCar {
      */
     public static int personIncome() {
 
-        int income = Integer.parseInt(JOptionPane.showInputDialog("Vad är din inkomst?"));
+        int income = Integer.parseInt(JOptionPane.showInputDialog("Vad är din inkomst (före skatt)? Ex: 12000"));
         return income;
+
     }
 }
-
