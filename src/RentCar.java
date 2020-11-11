@@ -14,6 +14,7 @@ public class RentCar {
             message = "Du får hyra en Ferrari";
         else
             message = "Du får inte hyra en Ferrari";
+
         JOptionPane.showMessageDialog(null, message);
     }
 
@@ -36,7 +37,7 @@ public class RentCar {
     static int yearLicence() {
 
         return Integer.parseInt(JOptionPane.showInputDialog
-                ("Hur många år har du haft ditt körtkort? (Skriv in i siffor ex: 2)" +
+                ("Hur många år har du haft ditt körkort? (Skriv in i siffor ex: 2)" +
                         "\noch" +
                         "\n(Har du inget körkort skriv siffra: 0)"));
     }
