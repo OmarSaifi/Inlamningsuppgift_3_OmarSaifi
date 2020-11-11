@@ -4,5 +4,4 @@ public class Person {
     int income;
     boolean licence;
     int yearLicence;
-
 }

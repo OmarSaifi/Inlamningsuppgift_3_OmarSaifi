@@ -8,6 +8,5 @@ public class Main {
         x.income = RentCar.personIncome();
 
         RentCar.canIHire(x.income, x.yearLicence, x.licence);
-
     }
 }
